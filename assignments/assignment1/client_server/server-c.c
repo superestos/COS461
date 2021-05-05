@@ -81,6 +81,8 @@ int server(char *server_port) {
             fflush(stdout);
             numbytes = recv(connfd, buffer, RECV_BUFFER_SIZE, 0);
         }
+
+        close(connfd);
     }
 
     return 0;

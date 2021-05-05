@@ -30,12 +30,12 @@ SKIP_MESSAGE="One or both programs missing. Skipping. \n\n"
 testNum=1
 
 # Locations of student and instructor files
-SCC=client_server/client-c # Student C client
-SCS=client_server/server-c # Student C server
-SPC=client_server/client-python.py # Student python client
-SPS=client_server/server-python.py # Student python server
-SGC=client_server/client-go # Student go client
-SGS=client_server/server-go # Student go server
+SCC=./client-c # Student C client
+SCS=./server-c # Student C server
+SPC=client-python.py # Student python client
+SPS=server-python.py # Student python server
+SGC=client-go # Student go client
+SGS=server-go # Student go server
 
 # function to compare message files
 # $1 = first file, $2 = second file, $3 = print separator (no if 0, yes otherwise),
@@ -170,9 +170,9 @@ trap handle_interrupt SIGINT
 # RUN TESTS
 ####################################################
 
-rm -rf $WORKSPACE
-mkdir $WORKSPACE
-cd $WORKSPACE
+#rm -rf $WORKSPACE
+#mkdir $WORKSPACE
+#cd $WORKSPACE
 
 printf "================================================================\n" 
 printf "Testing C client against C server (1/4)                         \n" 
