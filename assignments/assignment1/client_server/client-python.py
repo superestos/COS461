@@ -1,4 +1,4 @@
-###############################################################################
+ ###############################################################################
 # client-python.py
 # Name:
 # NetId:
@@ -11,7 +11,13 @@ SEND_BUFFER_SIZE = 2048
 
 def client(server_ip, server_port):
     """TODO: Open socket and send message from sys.stdin"""
-    pass
+    with socket.socket() as s:
+        s.connect((server_ip, server_port)) 
+        data = sys.stdin.buffer.read(SEND_BUFFER_SIZE)
+
+        while len(data) > 0:
+            s.send(data)
+            data = sys.stdin.buffer.read(SEND_BUFFER_SIZE)
 
 
 def main():

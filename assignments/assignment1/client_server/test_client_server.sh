@@ -22,7 +22,7 @@ else
     LANGUAGE=$1
 fi
 
-WORKSPACE=/vagrant/assignment1/.workspace
+WORKSPACE=.workspace
 numCorrect=0
 TESTS_PER_IMPL=5 # REMEBER TO UPDATE THIS IF NUMBER CHANGES!!!
 PORT=$2
@@ -30,12 +30,12 @@ SKIP_MESSAGE="One or both programs missing. Skipping. \n\n"
 testNum=1
 
 # Locations of student and instructor files
-SCC=/vagrant/assignment1/client_server/client-c # Student C client
-SCS=/vagrant/assignment1/client_server/server-c # Student C server
-SPC=/vagrant/assignment1/client_server/client-python.py # Student python client
-SPS=/vagrant/assignment1/client_server/server-python.py # Student python server
-SGC=/vagrant/assignment1/client_server/client-go # Student go client
-SGS=/vagrant/assignment1/client_server/server-go # Student go server
+SCC=client_server/client-c # Student C client
+SCS=client_server/server-c # Student C server
+SPC=client_server/client-python.py # Student python client
+SPS=client_server/server-python.py # Student python server
+SGC=client_server/client-go # Student go client
+SGS=client_server/server-go # Student go server
 
 # function to compare message files
 # $1 = first file, $2 = second file, $3 = print separator (no if 0, yes otherwise),
